@@ -17,7 +17,7 @@ function cadastrar() {
     // Requisição para back-end
     
     // Faz requisição ao servidor usando o verbo POST, enviando os dados para o servidor
-    fetch(`${url_server}/cadastro-teste`, {
+    fetch(`${url_server}/cadastro`, {
         // define o uso do método POST
         method: 'POST',
         // informações sobre o cabeçalho da requisição
@@ -53,7 +53,7 @@ function listarVeiculo() {
         tabela.deleteRow(i);
     }
 
-    fetch(`${url_server}/testandoCadastro`)
+    fetch(`${url_server}/veiculo`)
         .then(response => response.json())
         .then(data => {
             // Inserindo os dados da pessoa na tabela
