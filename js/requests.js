@@ -14,6 +14,8 @@ function cadastrar() {
         tipo: document.querySelector('[veiculo="tipo"]').value
     }
 
+    console.log(dados);
+
     // Requisição para back-end
     
     // Faz requisição ao servidor usando o verbo POST, enviando os dados para o servidor
@@ -72,12 +74,12 @@ function listarVeiculo() {
 
                 // Inserindo os dados da pessoa no elemento	
                 tdCombustivel.textContent = veiculo.combustivel;
-                tdRodas.textContent = combustivel.roda;
-                tdCor.textContent = combustivel.cor;
-                tdPlaca.textContent = combustivel.placa;
-                tdModelo.textContent = combustivel.modelo;
-                tdAno.textContent = combustivel.ano;
-                tdTipo.textContent = combustivel.tipo;
+                tdRodas.textContent = veiculo.roda;
+                tdCor.textContent = veiculo.cor;
+                tdPlaca.textContent = veiculo.placa;
+                tdModelo.textContent = veiculo.modelo;
+                tdAno.textContent = veiculo.ano;
+                tdTipo.textContent = veiculo.tipo;
 
                 // Inserindo os elementos nas linhas da tabela (tr => TableRow)
                 elementTr.appendChild(tdCombustivel);
